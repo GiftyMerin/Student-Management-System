@@ -12,7 +12,7 @@ def add_student():
     name = input("Enter Student Name: ")
 
     marks = {}
-    subjects = ["English", "Maths", "Science", "Computer", "Social Science"]
+    subjects = ["FSD", "ADT", "C&DS", "COD", "PYTHON"]
 
     for subject in subjects:
         while True:
