@@ -1,0 +1,24 @@
+1. Data Acquisition & Sources
+You will need historical weather data coupled with actual solar generation data. Excellent free resources include:
+
+PVGIS (Photovoltaic Geographical Information System): Offers free hourly solar radiation and PV generation data for almost any location globally.
+
+Kaggle: Search for "solar power generation dataset" or "photovoltaic power prediction" for pre-cleaned CSV files containing weather features and power output targets.
+
+NREL (National Renewable Energy Laboratory): Provides robust meteorological and solar datasets (like NSRDB).
+
+2. Feature Engineering (The Secret Sauce)
+Raw data rarely works straight out of the box. Create these predictive features to boost your model's accuracy:
+
+Time-Based Features: Extract hour, day of the year, and month to help the model learn seasonal and daily sun patterns.
+
+Lag Features: Include generation values from 1 hour or 24 hours ago, as current production is heavily correlated with recent history.
+
+Interaction Features: Combine temperature and solar irradiance, since high heat often degrades panel efficiency despite high sunlight.
+
+3. Model Training & Evaluation
+Start Simple: Begin with a Random Forest Regressor or Ridge Regression to establish a baseline score.
+
+Scale Up: Upgrade to gradient boosting algorithms like XGBoost or LightGBM, which excel at handling tabular weather data.
+
+Metrics: Evaluate your model using RMSE (Root Mean Squared Error) to penalize large errors heavily, and MAE (Mean Absolute Error) for an intuitive average error in kilowatts.
